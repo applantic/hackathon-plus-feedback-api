@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 class FeedbackStationConfiguration {
 
     @Bean
-    FeedbackStationFacade feedbackStationFacade(FeedbackStationRepository feedbackStationRepository) {
+    FeedbackStationFacade feedbackStationFacade(final FeedbackStationRepository feedbackStationRepository) {
         return new FeedbackStationFacade(feedbackStationRepository);
     }
 }

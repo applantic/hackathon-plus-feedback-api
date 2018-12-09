@@ -16,7 +16,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-class FeedbackStation extends BaseEntity {
+public class FeedbackStation extends BaseEntity {
     private FeedbackType type;
     private Boolean occurred;
     private String stationName;
