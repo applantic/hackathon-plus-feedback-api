@@ -22,6 +22,13 @@ class FeedbackStation extends BaseEntity {
     private String stationName;
     private String postalCode;
 
+    public FeedbackStation(FeedbackStationDto feedbackStation) {
+        this.type = feedbackStation.getType();
+        this.occurred = feedbackStation.getOccurred();
+        this.stationName = feedbackStation.getStationName();
+        this.postalCode = feedbackStation.getPostalCode();
+    }
+
     public FeedbackStationDto dto() {
         return FeedbackStationDto.builder()
                 .type(type)

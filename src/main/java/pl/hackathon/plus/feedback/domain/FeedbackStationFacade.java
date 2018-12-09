@@ -19,4 +19,8 @@ public class FeedbackStationFacade {
         Page<FeedbackStation> feedbackStations = feedbackStationRepository.findAll(pageable);
         return feedbackStations.map(FeedbackStation::dto);
     }
+
+    public void saveFeedback(FeedbackStationDto feedbackStation) {
+        feedbackStationRepository.save(new FeedbackStation(feedbackStation));
+    }
 }
